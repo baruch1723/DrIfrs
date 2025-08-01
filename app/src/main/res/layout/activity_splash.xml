@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/splash_logo"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="342dp"
+        android:layout_height="665dp"
         android:layout_centerInParent="true"
         android:src="@drawable/logo" /> 
         <!-- Make sure to replace 'logo' with the name of your image file -->
