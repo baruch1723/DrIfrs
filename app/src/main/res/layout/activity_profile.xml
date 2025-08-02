@@ -1,15 +1,11 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context=".ProfileActivity">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Profile Page"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-
-</RelativeLayout>
+    <TextView android:id="@+id/textViewName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="18sp"/>
+    <TextView android:id="@+id/textViewEmail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="18sp"/>
+    <TextView android:id="@+id/textViewWork" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="18sp"/>
+    <TextView android:id="@+id/textViewEducation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="18sp"/>
+</LinearLayout>

@@ -11,6 +11,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
 
 abstract class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -71,6 +72,13 @@ abstract class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationIt
                     startActivity(Intent(this, ProfileActivity::class.java))
                     finish()
                 }
+            }
+            R.id.nav_logout -> {
+                FirebaseAuth.getInstance().signOut()
+                val intent = Intent(this, LoginActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+                finish()
             }
         }
         return true
